@@ -21,30 +21,30 @@ export default function AgeGate() {
   };
 
   const handleLeave = () => {
-    window.location.href = 'https://www.youtubekids.com';
+    window.location.href = 'https://www.google.com';
   };
 
   if (!mounted) return null;
 
   if (!isAgeVerified) {
     return (
-      <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
-        <div className="text-center space-y-6">
-          <h1 className="text-3xl font-bold text-white">Are you over 18?</h1>
+      <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div className="border border-pink-500 rounded-lg p-8 max-w-md w-full mx-4 bg-black bg-opacity-80">
+          <h1 className="text-2xl font-bold text-white text-center mb-8">Are you over 18?</h1>
           
-          <div className="space-y-4">
+          <div className="flex gap-4 justify-center">
             <button
               onClick={handleConfirm}
-              className="block w-32 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded transition duration-300"
+              className="flex-1 bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded transition duration-300"
             >
-              YES
+              Enter
             </button>
             
             <button
               onClick={handleLeave}
-              className="block w-32 bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded transition duration-300"
+              className="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded transition duration-300"
             >
-              NO
+              Leave
             </button>
           </div>
         </div>
