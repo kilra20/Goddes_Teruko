@@ -25,5 +25,5 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Confirm build successful
-        run: ls -la out/ && echo "Build successful!"
+      - name: Deploy to GitHub Pages
+        run: npx gh-pages -d out -b gh-pages
