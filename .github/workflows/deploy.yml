@@ -64,9 +64,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      # `steps.deployment.outputs.page_url` isn't available at job evaluation time
-      # so avoid referencing it here to prevent workflow startup failure.
-    
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
